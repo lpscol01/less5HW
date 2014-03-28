@@ -1,0 +1,17 @@
+<h1>I am a user</h1>
+
+First Name: <%=@user.fname %>
+<br>
+
+Last Name: <%=@user.lname %>
+<br>
+Email: <%=@user.email %>
+
+
+<br>
+<br>
+<%=@user.posts.each do |post| %>
+	<%=post.body %>
+<% end %>
+
+<%=link_to "Edit profile", edit_user_path(@user) %>

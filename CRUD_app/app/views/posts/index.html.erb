@@ -1,0 +1,12 @@
+<h1>Junk you wrote...</h1>
+
+<% @user.posts.each do |post| %>
+	
+	<%=post.title %>
+	<br>
+	<%=post.body %>
+	<br>
+	<%= post.created_at.strftime("%b, %d, %Y") %>
+	<br>
+	<br>
+<% end %>
